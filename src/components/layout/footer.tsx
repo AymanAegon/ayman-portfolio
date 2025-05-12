@@ -1,3 +1,4 @@
+
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import { Github, Linkedin, Twitter } from "lucide-react";
@@ -5,7 +6,7 @@ import { Github, Linkedin, Twitter } from "lucide-react";
 export function Footer() {
   return (
     <footer className="border-t border-border/40 py-8 bg-background">
-      <div className="container flex flex-col items-center justify-between gap-4 sm:flex-row">
+      <div className="container mx-auto px-4 flex flex-col items-center justify-between gap-4 sm:flex-row">
         <p className="text-sm text-muted-foreground">
           &copy; {new Date().getFullYear()} {siteConfig.author.name}. All rights reserved.
         </p>

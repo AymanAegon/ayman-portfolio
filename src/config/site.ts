@@ -1,7 +1,7 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "CodeCanvas Portfolio",
+  name: "Aimane Ammar",
   description: "Showcasing my journey and projects as a Software Engineer.",
   navItems: [
     { label: "Home", href: "#home" },

@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'CodeCanvas Portfolio',
+  title: 'Aimane Ammar',
   description: 'A personal portfolio website to showcase software engineering work.',
 };
 
