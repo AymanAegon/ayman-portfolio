@@ -63,7 +63,7 @@ export function ContactSection() {
       console.error("Error submitting form:", error);
       toast({
         title: "Error",
-        description: error.message || "There was an issue sending your message. Please try again later.",
+        description: "There was an issue sending your message. Please try again later.",
         variant: "destructive",
       });
     }
