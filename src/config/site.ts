@@ -10,14 +10,14 @@ export const siteConfig = {
     { label: "Contact", href: "#contact" },
   ],
   socialLinks: {
-    github: "https://github.com/yourusername",
-    linkedin: "https://linkedin.com/in/yourusername",
-    twitter: "https://twitter.com/yourusername",
+    github: "https://github.com/AymanAegon",
+    linkedin: "https://www.linkedin.com/in/aimane-ammar/",
+    twitter: "https://x.com/Ayman1Ammar",
   },
   author: {
-    name: "Your Name",
+    name: "Aimane Ammar",
     title: "Software Engineer",
-    email: "your.email@example.com",
+    email: "ayo12ammar24@gmail.com",
     intro: "I build modern, responsive, and scalable web applications. Passionate about clean code and user-centric design.",
   }
 };

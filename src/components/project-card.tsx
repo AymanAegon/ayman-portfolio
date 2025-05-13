@@ -17,10 +17,10 @@ export function ProjectCard({ project }: ProjectCardProps) {
         <Image
           src={project.imageUrl}
           alt={project.title}
-          layout="fill"
-          objectFit="cover"
-          className="rounded-t-lg"
+          fill
+          className="rounded-t-lg object-cover"
           data-ai-hint="project application"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
         />
       </div>
       <CardHeader className="pb-2">
