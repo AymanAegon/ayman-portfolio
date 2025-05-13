@@ -38,20 +38,35 @@ export function ContactSection() {
   });
 
   async function onSubmit(data: ContactFormValues) {
-    // Simulate form submission (e.g., to EmailJS or Firebase Function)
-    console.log("Form submitted:", data);
-    // Here you would typically call your backend or email service
-    // For now, we'll just show a success toast
-    
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    try {
+      const response = await fetch('/api/submit-contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
 
-    toast({
-      title: "Message Sent!",
-      description: "Thanks for reaching out. I'll get back to you soon.",
-      variant: "default",
-    });
-    form.reset();
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        toast({
+          title: "Message Sent!",
+          description: "Thanks for reaching out. I'll get back to you soon.",
+          variant: "default",
+        });
+        form.reset();
+      } else {
+        throw new Error(result.message || "Failed to send message. Please try again.");
+      }
+    } catch (error: any) {
+      console.error("Error submitting form:", error);
+      toast({
+        title: "Error",
+        description: error.message || "There was an issue sending your message. Please try again later.",
+        variant: "destructive",
+      });
+    }
   }
 
   return (

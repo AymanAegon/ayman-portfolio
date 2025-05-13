@@ -19,10 +19,10 @@ export function AboutSection() {
         <div className="grid md:grid-cols-3 gap-8 items-center">
           <div className="md:col-span-1 flex justify-center">
             <Image
-              src="https://picsum.photos/seed/aboutme/300/300"
+              src="https://res.cloudinary.com/drmmom6jz/image/upload/t_ayman/v1747143644/ipfkchq5z0qwcchbunuz.png"
               alt="My Profile Picture"
-              width={240}
-              height={240}
+              width={300}
+              height={300}
               className="rounded-full shadow-lg object-cover"
               data-ai-hint="profile picture"
             />

@@ -1,16 +1,20 @@
-import type { Project } from '@/types/project';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Project } from '@/types/project';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Github, ExternalLink } from 'lucide-react';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { useState } from 'react';
 
 interface ProjectCardProps {
   project: Project;
 }
 
 export function ProjectCard({ project }: ProjectCardProps) {
+  const [isExpanded, setIsExpanded] = useState(false);
+
   return (
     <Card className="flex flex-col h-full overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-lg">
       <div className="relative w-full h-48 sm:h-56">
@@ -27,12 +31,24 @@ export function ProjectCard({ project }: ProjectCardProps) {
         <CardTitle className="text-xl md:text-2xl font-semibold text-primary">{project.title}</CardTitle>
       </CardHeader>
       <CardContent className="flex-grow">
-        <CardDescription className="text-sm text-muted-foreground mb-3 leading-relaxed line-clamp-3">
-          {project.shortSummary || project.description}
-        </CardDescription>
-        <div className="flex flex-wrap gap-2 mb-4">
+        <Accordion type="single" collapsible onValueChange={(value) => setIsExpanded(!!value)}>
+          <AccordionItem value="item-1" className="border-b-0">
+            <CardDescription className={`text-sm text-muted-foreground mb-3 leading-relaxed ${isExpanded ? '' : 'line-clamp-3'}`}>
+              {project.shortSummary || project.description}
+            </CardDescription>
+            <AccordionTrigger className="text-sm text-primary hover:no-underline justify-start py-1 pt-0">
+              {isExpanded ? "Show less" : "Show more"}
+            </AccordionTrigger>
+            <AccordionContent className="pb-0">
+              <CardDescription className="text-sm text-muted-foreground leading-relaxed">
+                {project.description}
+              </CardDescription>
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
+        <div className="flex flex-wrap gap-2 mb-4 mt-3">
           {project.techStack.map((tech) => (
-            <Badge key={tech} variant="secondary" className="text-xs px-2 py-0.5 bg-accent/20 text-accent-foreground/80">
+            <Badge key={tech} variant="secondary" className="text-xs px-2 py-0.5 bg-accent/90 text-accent-foreground/80 hover:bg-accent/70">
               {tech}
             </Badge>
           ))}
