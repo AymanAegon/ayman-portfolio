@@ -19,7 +19,7 @@ export function AboutSection() {
         <div className="grid md:grid-cols-3 gap-8 items-center">
           <div className="md:col-span-1 flex justify-center">
             <Image
-              src="https://res.cloudinary.com/drmmom6jz/image/upload/t_ayman/v1747143644/ipfkchq5z0qwcchbunuz.png"
+              src="https://res.cloudinary.com/drmmom6jz/image/upload/t_ayman/v1747143644/2b4d3e0c343bd5caed84ba649f9116e8_high_veoqxc.png"
               alt="My Profile Picture"
               width={300}
               height={300}
