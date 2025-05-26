@@ -35,9 +35,6 @@ export function CvDownloadSection() {
                 Download CV (PDF)
               </Link>
             </Button>
-            <p className="text-xs text-muted-foreground mt-6">
-              <strong>Note:</strong> To make this download link work, please add your CV (e.g., <code>aimane-ammar-cv.pdf</code>) to the <code>public</code> folder in your project. If your CV has a different name, update the link in <code>src/components/sections/cv-download-section.tsx</code>.
-            </p>
           </CardContent>
         </Card>
       </div>
