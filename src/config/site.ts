@@ -1,3 +1,4 @@
+
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
@@ -7,6 +8,7 @@ export const siteConfig = {
     { label: "Home", href: "#home" },
     { label: "About", href: "#about" },
     { label: "Projects", href: "#projects" },
+    { label: "CV", href: "#cv" },
     { label: "Contact", href: "#contact" },
   ],
   socialLinks: {
