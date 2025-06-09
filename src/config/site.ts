@@ -15,6 +15,7 @@ export const siteConfig = {
     github: "https://github.com/AymanAegon",
     linkedin: "https://www.linkedin.com/in/aimane-ammar/",
     twitter: "https://x.com/Ayman1Ammar",
+    instagram: "https://www.instagram.com/ayman_.amr",
   },
   author: {
     name: "Aimane Ammar",

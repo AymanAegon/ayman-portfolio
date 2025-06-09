@@ -1,7 +1,7 @@
 
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
-import { Github, Linkedin, Twitter } from "lucide-react";
+import { Github, Linkedin, Twitter, Instagram } from "lucide-react";
 
 export function Footer() {
   return (
@@ -21,11 +21,16 @@ export function Footer() {
               <Linkedin className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
             </Link>
           )}
-           {siteConfig.socialLinks.twitter && (
-            <Link href={siteConfig.socialLinks.twitter} target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-              <Twitter className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
-            </Link>
-          )}
+          {siteConfig.socialLinks.twitter && (
+           <Link href={siteConfig.socialLinks.twitter} target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+             <Twitter className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
+           </Link>
+         )}
+         {siteConfig.socialLinks.instagram && (
+          <Link href={siteConfig.socialLinks.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <Instagram className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
+          </Link>
+        )}
         </div>
       </div>
     </footer>
