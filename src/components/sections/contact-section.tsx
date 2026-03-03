@@ -71,8 +71,8 @@ export function ContactSection() {
   }
 
   return (
-    <section id="contact" className="py-20 md:py-32 bg-background relative">
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[100px] pointer-events-none" />
+    <section id="contact" className="py-20 md:py-32 bg-transparent relative">
+      {/* Removed static background circle */}
 
       <div className="container mx-auto px-4 relative z-10">
         <motion.div

@@ -24,7 +24,8 @@ export function Navbar() {
   if (!mounted) return null; // Avoid hydration mismatch for isMobile dependent rendering
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/10 bg-background/70 backdrop-blur-xl supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full bg-background/70 backdrop-blur-xl supports-[backdrop-filter]:bg-background/60">
+      <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-border/40 to-transparent" />
       <div className="container mx-auto px-4 flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center space-x-2">
           <Feather className="h-6 w-6 text-primary" />

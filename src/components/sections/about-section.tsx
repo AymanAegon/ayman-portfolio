@@ -14,8 +14,8 @@ const bio = "Hello! I'm a passionate Software Engineer with a knack for creating
 
 export function AboutSection() {
   return (
-    <section id="about" className="py-20 md:py-32 bg-secondary/30 relative overflow-hidden">
-      <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px] pointer-events-none" />
+    <section id="about" className="py-20 md:py-32 bg-transparent relative overflow-hidden">
+      {/* Removed static background circle */}
 
       <div className="container mx-auto px-4 relative z-10">
         <motion.div

@@ -5,6 +5,8 @@ import { Navbar } from '@/components/layout/navbar';
 import { Footer } from '@/components/layout/footer';
 import { Toaster } from '@/components/ui/toaster';
 import { Providers } from '@/components/providers';
+import { MouseFollowingBackground } from '@/components/layout/mouse-following-background';
+import { BackgroundTexture } from '@/components/layout/background-texture';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -28,9 +30,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}>
         <Providers>
-          <div className="flex flex-col min-h-screen">
+          <MouseFollowingBackground />
+          <BackgroundTexture />
+          <div className="relative z-10 flex flex-col min-h-screen bg-transparent">
             <Navbar />
             <main className="flex-grow">
               {children}

@@ -8,7 +8,7 @@ import Link from "next/link";
 
 export function CvDownloadSection() {
   return (
-    <section id="cv" className="py-16 md:py-24 bg-background">
+    <section id="cv" className="py-16 md:py-24 bg-transparent">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">
           Download My CV
@@ -29,9 +29,13 @@ export function CvDownloadSection() {
               2. Update the `href` attribute in the Link component below to point to your CV file (e.g., '/your-cv.pdf').
               3. The `download` attribute suggests the filename for the user when they download the file.
             */}
-            <Button asChild size="lg">
+            <Button
+              asChild
+              size="lg"
+              className="group relative transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(var(--primary),0.4)] hover:shadow-primary/50 border border-transparent hover:border-primary/50"
+            >
               <Link href="/aimane-ammar-cv.pdf" download="Aimane_Ammar_CV.pdf">
-                <Download className="mr-2 h-5 w-5" />
+                <Download className="mr-2 h-5 w-5 group-hover:animate-bounce" />
                 Download CV (PDF)
               </Link>
             </Button>

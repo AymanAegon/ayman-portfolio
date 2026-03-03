@@ -8,9 +8,9 @@ import { motion } from "framer-motion";
 
 export function HeroSection() {
   return (
-    <section id="home" className="relative py-20 md:py-32 overflow-hidden bg-background">
+    <section id="home" className="relative py-20 md:py-32 overflow-hidden bg-transparent">
       {/* Background Elements */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] opacity-20 dark:opacity-10 pointer-events-none">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] opacity-10 dark:opacity-5 pointer-events-none">
         <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-full blur-[120px] animate-pulse-slow" />
       </div>
 

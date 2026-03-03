@@ -14,7 +14,7 @@ export function ProjectsSection() {
   });
 
   return (
-    <section id="projects" className="py-16 md:py-24 bg-background">
+    <section id="projects" className="py-16 md:py-24 bg-transparent">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">
           My Projects
@@ -31,8 +31,8 @@ export function ProjectsSection() {
                   <Skeleton className="h-4 w-5/6" />
                 </div>
                 <div className="flex gap-2 pt-2">
-                    <Skeleton className="h-8 w-24" />
-                    <Skeleton className="h-8 w-24" />
+                  <Skeleton className="h-8 w-24" />
+                  <Skeleton className="h-8 w-24" />
                 </div>
               </div>
             ))}
@@ -40,13 +40,13 @@ export function ProjectsSection() {
         )}
 
         {isError && (
-           <Alert variant="destructive" className="max-w-2xl mx-auto">
-             <Terminal className="h-4 w-4" />
-             <AlertTitle>Error Loading Projects</AlertTitle>
-             <AlertDescription>
-               There was an issue fetching projects. Displaying sample projects instead. Error: {error?.message}
-             </AlertDescription>
-           </Alert>
+          <Alert variant="destructive" className="max-w-2xl mx-auto">
+            <Terminal className="h-4 w-4" />
+            <AlertTitle>Error Loading Projects</AlertTitle>
+            <AlertDescription>
+              There was an issue fetching projects. Displaying sample projects instead. Error: {error?.message}
+            </AlertDescription>
+          </Alert>
         )}
 
         {projects && projects.length > 0 && (
@@ -58,13 +58,13 @@ export function ProjectsSection() {
         )}
 
         {projects && projects.length === 0 && !isLoading && (
-           <Alert className="max-w-lg mx-auto">
-             <Terminal className="h-4 w-4" />
-             <AlertTitle>No Projects Yet!</AlertTitle>
-             <AlertDescription>
-               It seems there are no projects to display at the moment. Please check back later!
-             </AlertDescription>
-           </Alert>
+          <Alert className="max-w-lg mx-auto">
+            <Terminal className="h-4 w-4" />
+            <AlertTitle>No Projects Yet!</AlertTitle>
+            <AlertDescription>
+              It seems there are no projects to display at the moment. Please check back later!
+            </AlertDescription>
+          </Alert>
         )}
       </div>
     </section>
